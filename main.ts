@@ -140,8 +140,9 @@ function hit(player: any, other: any) {
     game.over(false)
 }
 
-//  sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, hit)
-//  sprites.on_overlap(SpriteKind.player, SpriteKind.projectile, hit)  
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, hit)
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, hit)
+
 function next_level(dino: any, portal: any) {
     
     if (sprites.allOfKind(SpriteKind.Enemy).length < 1) {
